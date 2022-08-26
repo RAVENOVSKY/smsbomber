@@ -86,7 +86,7 @@ def snapp_api():
         data = {"cellphone":phone_number_B}
         req = post(snapp, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Snapp')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Snapp')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Snapp')
@@ -101,7 +101,7 @@ def tapsi_api():
         data = {"credential": {"phoneNumber": phone_number,"role": "PASSENGER"},"otpOption": "SMS"}
         req = post(tapsi, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Tapsi')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Tapsi')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Tapsi')
@@ -116,7 +116,7 @@ def digikala_api():
         data = {"username":phone_number}
         req = post(digikala, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Digikala')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Digikala')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Digikala')
@@ -131,7 +131,7 @@ def basalam_api():
         data = {"mobile":phone_number}
         req = post(basalam, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Basalam')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Basalam')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Basalam')
@@ -146,7 +146,7 @@ def tamland_api():
         data = {"Mobile":phone_number}
         req = post(tamland, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Tamland')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Tamland')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Tamland')
@@ -161,7 +161,7 @@ def alibaba_api():
         data = {"phoneNumber":phone_number_A}
         req = post(alibaba, json=data, timeout=4)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Alibaba')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Alibaba')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Alibaba')
@@ -176,7 +176,7 @@ def divar_api():
         data = {"phone":phone_number_A}
         req = post(divar, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Divar')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Divar')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Divar')
@@ -191,7 +191,7 @@ def anten_api():
         data = {"phone":phone_number}   
         req = post(anten, json=data, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Anten')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Anten')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Anten')
@@ -206,7 +206,7 @@ def snappdoctor_api():
         snappdoctor = f'https://core.snapp.doctor/Api/Common/v1/sendVerificationCode/{phone_number}/sms?cCode=+98'  
         req = get(snappdoctor, timeout=3)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Snapp Doctor')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Snapp Doctor')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Snapp Doctor')
@@ -220,7 +220,7 @@ def torob_api():
     try:   
         req = get(torob+phone_number, timeout=2)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Torob')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Torob')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Torob')
@@ -235,7 +235,7 @@ def ponisha_api():
         data = {"mobile":phone_number_B,"type":"1"}   
         req = post(ponisha, json=data, timeout=5)
         if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfuly --> API: Ponisha')
+            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Ponisha')
             sent+=1
         else:
             print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Ponisha')
