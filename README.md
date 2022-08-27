@@ -5,8 +5,9 @@
   -> os
   -> time
   -> datetime
-  
-  
+  -> colorama
+
+
 <-----------{ CLUSTER ATTACK }-----------> 
 
   -> Line 266-269
@@ -19,3 +20,10 @@
 <-----------{ ATTENTION }-----------> 
 
   -> I'm not responsible for your actions !
+
+
+<-----------{ FIXED BUGS }-----------> 
+
+  -> I used colorama instead of ANSI escape codes
+  -> There are some issues with ANSI escape codes on previous versions of python
+  
