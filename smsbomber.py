@@ -3,8 +3,10 @@ from requests import post, get
 from os import name, system
 from time import sleep
 import datetime
+from colorama import init, Fore
 #import concurrent.futures
 
+init()
 def current_time():
     return str(datetime.datetime.now())[12:19]
 
@@ -27,13 +29,11 @@ torob = 'https://api.torob.com/v4/user/phone/send-pin/?phone_number='
 ponisha = 'https://ponisha.ir/send-mobile-verfication'
 
 #--------[ COLORS ]--------#
-red = '\033[31m'
-lightred = '\033[91m'
-yellow = '\033[93m'
-green = '\033[92m'
-blue = '\033[94m'
-purple = '\033[95m'
-white = '\033[37m'
+red = Fore.RED
+lightred = Fore.LIGHTRED_EX
+yellow = Fore.LIGHTYELLOW_EX
+green = Fore.LIGHTGREEN_EX
+white = Fore.WHITE
 
 developer = f'{white}R4V3N'
 github = f'{white}https://github.com/ravenovsky'
